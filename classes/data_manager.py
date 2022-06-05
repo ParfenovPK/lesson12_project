@@ -20,7 +20,7 @@ class DataManager:
 
     def _save_data(self, data):
         """Перезаписывает переданные данные в файл с данными"""
-        with open(self.path, 'a', encoding='utf-8') as file:
+        with open(self.path, 'w', encoding='utf-8') as file:
             json.dump(data, file, ensure_ascii=False, indent=2)
 
     def get_all(self):
